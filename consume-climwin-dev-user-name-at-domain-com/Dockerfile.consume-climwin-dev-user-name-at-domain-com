@@ -1,0 +1,6 @@
+FROM ubuntu:24.04
+
+COPY --from=qcdis/conda-lter-life:v0.1 /venv/ /venv/
+RUN mkdir -p /app
+COPY consume-climwin-dev-user-name-at-domain-com.R /app
+
