@@ -1,5 +1,5 @@
 FROM ghcr.io/qcdis/naavre/naavre-cell-build-python:v0.4 AS build
-COPY print-param-r-outside-cell-dev-user-name-at-domain-com-environment.yaml .
+COPY environment.yaml .
 RUN micromamba install -y -n venv -f environment.yaml
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 USER root
