@@ -4,11 +4,11 @@ channels:
 dependencies:
   - pip
   - python>=3.8
-  - dplyr
-  - purrr
-  - lubridate
-  - ggpubr
-  - tidyr
-  - stringr
+  - r-lubridate
+  - r-ggpubr
+  - r-dplyr
+  - r-tidyr
+  - r-purrr
+  - r-stringr
   - papermill
   - ipykernel
