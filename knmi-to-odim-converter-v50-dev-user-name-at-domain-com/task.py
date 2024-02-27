@@ -164,17 +164,13 @@ def knmi_to_odim(in_fpath,out_fpath):
 This is how my nested list comes in. The variable 'knmi_pvol_paths' is a list itself, the contents are questionable.
 knmi_pvol_paths=['[["/tmp/data/knmi/NL/HRW/2019/12/31/RAD_NL62_VOL_NA_201912312300.h5"]]', '[["/tmp/data/knmi/NL/HRW/2020/01/01/RAD_NL62_VOL_NA_202001010000.h5"]]']
 """
-check_list = []
-for element in knmi_pvol_paths:
-    sublist = eval(element)
-    for item in sublist:
-        check_list += item
-print(f"{check_list=}")
-knmi_pvol_paths = check_list   
+ 
 print(f"{knmi_pvol_paths=}")
 odim_pvol_paths = []
 radar_db = load_radar_db(conf_local_radar_db)
 for knmi_path in knmi_pvol_paths:
+    if isinstance(knmi_path, list):
+        knmi_path = knmi_path[0]
     out_path_pvol_odim = pathlib.Path(knmi_path.replace('knmi','odim'))
     print(f"{knmi_path=}")
     print(f"{out_path_pvol_odim=}")
