@@ -19,5 +19,5 @@ names = json.loads(args.names)
 
 
 for name in names:
-    print(f'Helloo, {name}')
+    print(f'Hello, {name}')
 
