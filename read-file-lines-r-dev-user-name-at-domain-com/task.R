@@ -34,6 +34,8 @@ print(onlyfiles)
 f <- file(file_path, "r")
 lines <- readLines(f)
 close(f)
+abcdefghijklmnopqrstuvwxyz = 1
+abcdefghijklmnopqrstuvwxyz = 1
 
 
 
