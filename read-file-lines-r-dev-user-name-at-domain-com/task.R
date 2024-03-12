@@ -36,7 +36,6 @@ lines <- readLines(f)
 close(f)
 abcdefghijklmnopqrstuvwxyz = 1
 abcdefghijklmnopqrstuvwxyz = 1
-a = 0.8193923140503557
 
 
 
