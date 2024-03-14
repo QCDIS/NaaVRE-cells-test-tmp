@@ -1,3 +1,4 @@
+import numpy as np
 
 import argparse
 arg_parser = argparse.ArgumentParser()
@@ -18,6 +19,7 @@ names = json.loads(args.names)
 
 
 
+print(np.pi)
 for name in names:
     print(f'Hello, {name}')
 
