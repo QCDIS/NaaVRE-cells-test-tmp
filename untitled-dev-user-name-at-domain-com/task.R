@@ -23,6 +23,7 @@ param_mylist = opt$param_mylist
 
 
 
+print(param_mylist)
 for (item in param_mylist) {
     print(item)
 }
